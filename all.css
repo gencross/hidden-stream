@@ -1,0 +1,15 @@
+/* 
+    Document   : all
+    Created on : Aug 7, 2013, 2:50:16 AM
+    Author     : Miles
+    Description:
+        Base style for the site.
+*/
+
+#container { 
+    margin: 0px auto;
+    width: 80%;
+    max-width: 1260px;
+    min-width: 780px;
+}
+

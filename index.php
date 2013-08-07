@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Title</title>
-<meta charset="UTF-8" />
-<style type="text/css">
-html
-{font-family:sans-serif;}
-</style>
-</head>
-<body>
-<p>Hello, World!</p>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>hidden-stream</title>
+    </head>
+    <body>
+        <div id="container">
+            This is some text.
+        </div>
+        <?php
+        // put your code here
+        ?>
+    </body>
 </html>
