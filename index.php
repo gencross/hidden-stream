@@ -8,7 +8,7 @@
          <?php
          $rawdata = fopen("http://prod.api.pvp.net/api/lol/na/v1.2/game/by-summoner/25714810/recent?api_key=0e93152b-898d-41a7-8b74-39a609fcec81", "r");
          $data = json_decode($rawdata, TRUE);
-         $gold = $data[games][0][statistics][2][value];
+         $gold = $data["games"][0]["statistics"][2]["value"];
        // $ch = curl_init();
        // curl_setopt($ch, CURLOPT_URL, "http://www.example.com/");
        // curl_setopt($ch, CURLOPT_HEADER, false);

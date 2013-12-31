@@ -6,7 +6,7 @@
         Base style for the site.
 */
 html {
-    font-family:sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 #container { 
