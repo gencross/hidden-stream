@@ -5,6 +5,9 @@
     Description:
         Base style for the site.
 */
+html {
+    font-family:sans-serif;
+}
 
 #container { 
     margin: 0px auto;
