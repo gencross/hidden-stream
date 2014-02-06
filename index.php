@@ -8,6 +8,6 @@
     	<h1>A new side project</h1><br />
     	<a href="league.php">Some league thing</a><br />
     	<a href="http://damp-cove.herokuapp.com">Some other thing that doesn't work</a><br />
-    	<a href="git@heroku.com:hidden-stream.git">Git</a>
+    	<a href="git://git@heroku.com:hidden-stream.git">Git</a>
     </body>
 </html>
