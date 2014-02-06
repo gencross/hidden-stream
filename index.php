@@ -5,25 +5,9 @@
         <title>hidden-stream</title>
     </head>
     <body>
-         <?php
-         $rawdata = fopen("http://prod.api.pvp.net/api/lol/na/v1.2/game/by-summoner/25714810/recent?api_key=0e93152b-898d-41a7-8b74-39a609fcec81", "r");
-         $data = json_decode($rawdata, TRUE);
-         $id = $data["summonerId"];
-       // $ch = curl_init();
-       // curl_setopt($ch, CURLOPT_URL, "http://www.example.com/");
-       // curl_setopt($ch, CURLOPT_HEADER, false);
-        ?>
-        <div id="container">
-            <table>
-                <tr>
-                    <th>Stat</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Summoner ID</td>
-                    <td><?php echo $id ?></td>
-                </tr>
-            </table>
-        </div>
+    	<h1>A new side project</h1><br />
+    	<a href="league.php">Some league thing</a><br />
+    	<a href="http://damp-cove.herokuapp.com">Some other thing that doesn't work</a><br />
+    	<a href="git@heroku.com:hidden-stream.git">Git</a>
     </body>
 </html>
