@@ -29,7 +29,7 @@
     	
     	<form id="myForm" action="index.php" method="POST">
     		<input type="text" name="number"></input>
-    		<input type="sumbit" />
+    		<input type="sumbit" ></input>
     	</form>
     	
     </body>
