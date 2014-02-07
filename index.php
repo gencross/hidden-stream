@@ -7,7 +7,7 @@
     </head>
     <body>
     	<?php
-			$hiddenNumber = 42 //the "hidden number"
+			$hiddenNumber = 42; //the "hidden number"
 			$output = "";
 
 			//Defining functions here
