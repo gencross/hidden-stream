@@ -39,6 +39,8 @@
     	<p>
     		<?php
 				echo $output;
+				echo "<br />";
+				echo $_POST["number"] + 10;
     		?>
     	</p>
     	
