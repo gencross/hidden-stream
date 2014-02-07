@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
-	$_SESSION['hiddenNumber'];
+	$_SESSION['hiddenNumber'] = 0;
 ?>
 <html id="all">
     <head>
@@ -46,6 +46,8 @@
     	<p>
     		<?php
 				echo $output;
+				echo "<br />";
+				echo $hiddenNumber;
     		?>
     	</p>
     	
