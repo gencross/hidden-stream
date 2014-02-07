@@ -11,20 +11,20 @@
 			$output = "empty";
 
 			//Defining functions here
-			function highOrLow() {
-				if ($_POST["number"] < $hiddenNumber) {
-					$output = "Too low!";
+			function highOrLow($guess) {
+				if ($guess < $hiddenNumber) {
+					return "Too low!";
 					}
-				elseif ($_POST["number"] > $hiddenNumber) {
-					$output = "Too high!";
+				elseif ($guess > $hiddenNumber) {
+					return "Too high!";
 					}
 				else {
-					$output = "You guessed it! The number was " . $hiddenNumber . ".";
+					return "You guessed it! The number was " . $hiddenNumber . ".";
 				}
 			}
 
 			if ($_POST["number"]) {
-				highOrLow();
+				$output = highOrLow($_POST["number"]);
 				}
     		else {
 				$output = "You didn't pick a number!";
