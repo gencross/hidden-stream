@@ -7,7 +7,7 @@
     </head>
     <body>
     	<?php
-			$hiddenNumber = 42; //the "hidden number"
+			$hiddenNumber = "42"; //the "hidden number"
 			$output = "empty";
 
 			//Defining functions here
@@ -33,14 +33,14 @@
     	<h1>A new side project</h1><br />
     	
     	<a href="league.php">Some league thing</a><br />
-    	<a href="http://damp-cove.herokuapp.com">Some other thing that doesn't work</a><br />
-    	<a href="git://git@heroku.com:hidden-stream.git">Git</a>
+    	<a href="http://damp-cove.herokuapp.com" target="_blank">Some other thing that doesn't work</a><br />
+    	<a href="git://git@heroku.com:hidden-stream.git" target="_blank">Git</a>
     
     	<p>
     		<?php
 				echo $output;
 				echo "<br />";
-				echo $_POST["number"] + 10;
+				echo $_POST["number"];
     		?>
     	</p>
     	
