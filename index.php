@@ -12,6 +12,7 @@
 
 			//Defining functions here
 			function highOrLow($guess) {
+				global $hiddenNumber;
 				if ($guess < $hiddenNumber) {
 					return "Too low!";
 					}
