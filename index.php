@@ -8,7 +8,7 @@
     <body>
     	<?php
 			$hiddenNumber = 42; //the "hidden number"
-			$output = "";
+			$output = "empty";
 
 			//Defining functions here
 			function highOrLow() {
