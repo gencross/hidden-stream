@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+	$_SESSION['hiddenNumber'];
+?>
 <html id="all">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,8 +11,8 @@
     </head>
     <body>
     	<?php
-			$hiddenNumber = "42"; //the "hidden number"
-			$output = "empty";
+			$hiddenNumber = $_SESSION['hiddenNumber']; //the "hidden number" is randomly
+			$output = "";                              //set when someone guesses right
 
 			//Defining functions here
 			function highOrLow($guess) {
@@ -20,7 +24,8 @@
 					return "Too high!";
 					}
 				else {
-					return "You guessed it! The number was " . $hiddenNumber . ".";
+					return "You guessed it! The number was " . $hiddenNumber . ". The number has been reset, so you can guess again!";
+					$_SESSION['hiddenNumber'] = mt_rand(1,100);
 				}
 			}
 
@@ -28,7 +33,8 @@
 				$output = highOrLow($_POST["number"]);
 				}
     		else {
-				$output = "You didn't pick a number!";
+				$output = "You didn't pick a number! The number has been reset!";
+				$_SESSION['hiddenNumber'] = mt_rand(1,100);
 			}
     	?>
     	<h1>A new side project</h1><br />
@@ -40,8 +46,6 @@
     	<p>
     		<?php
 				echo $output;
-				echo "<br />";
-				echo $_POST["number"];
     		?>
     	</p>
     	
