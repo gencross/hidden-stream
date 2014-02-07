@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <?php
+	//
+	// FIND OUT HOW TO STORE THE VALUE AS 
+	// A SESSION VARIABLE, NOT AS A REGULAR ONE.
+	// IF IT'S A REGULAR ONE IT CAN'T BE RANDOMIZED
+	// !!!DON'T SPAGHETTICODE!!!
+	//
 	session_start();
-	$_SESSION['hiddenNumber'] = 0;
+	$_SESSION['hiddenNumber'] = $_POST['hiddenNumber'];
 ?>
 <html id="all">
     <head>
@@ -29,12 +35,12 @@
 				}
 			}
 
-			if ($_POST["number"]) {
-				$output = highOrLow($_POST["number"]);
+			if ($_POST['number']) {
+				$output = highOrLow($_POST['number']);
 				}
     		else {
 				$output = "You didn't pick a number! The number has been reset!";
-				$_SESSION['hiddenNumber'] = mt_rand(1,100);
+				$_POST['hiddenNumber'] = mt_rand(1,100);
 			}
     	?>
     	<h1>A new side project</h1><br />
