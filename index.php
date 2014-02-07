@@ -12,10 +12,10 @@
 
 			//Defining functions here
 			function highOrLow($guess) {
-				if ($guess < "42") {
+				if ($guess < $hiddenNumber) {
 					return "Too low!";
 					}
-				elseif ($guess > "42") {
+				elseif ($guess > $hiddenNumber) {
 					return "Too high!";
 					}
 				else {
