@@ -7,12 +7,28 @@
     </head>
     <body>
     	<?php
-    		if ($_POST["number"]) {
-    			$number = "Your number was " . $_POST["number"] . ".";
-    			}
+			$hiddenNumber = 42 //the "hidden number"
+			$output = "";
+
+			//Defining functions here
+			function highOrLow() {
+				if ($_POST["number"] < $hiddenNumber) {
+					$output = "Too low!";
+					}
+				elseif ($_POST["number"] > $hiddenNumber) {
+					$output = "Too high!";
+					}
+				else {
+					$output = "You guessed it! The number was " . $hiddenNumber . ".";
+				}
+			}
+
+			if ($_POST["number"]) {
+				highOrLow();
+				}
     		else {
-    			$number = "You didn't pick a number!";
-    			}
+				$output = "You didn't pick a number!";
+			}
     	?>
     	<h1>A new side project</h1><br />
     	
@@ -22,7 +38,7 @@
     
     	<p>
     		<?php
-    			echo $number;
+				echo $output;
     		?>
     	</p>
     	
