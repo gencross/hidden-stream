@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	//
-	// FIND OUT HOW TO STORE THE VALUE AS 
+	// FIND OUT HOW TO STORE THE VALUE AS
 	// A SESSION VARIABLE, NOT AS A REGULAR ONE.
 	// IF IT'S A REGULAR ONE IT CAN'T BE RANDOMIZED
 	// !!!DON'T SPAGHETTICODE!!!
@@ -9,15 +9,16 @@
 	session_start();
 	$_SESSION['hiddenNumber'] = $_POST['hiddenNumber'];
 ?>
-<html id="all">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>hidden-stream</title
+        <title>hidden-stream</title>
 		<link rel="stylesheet" type="text/css" href="all.css" />
     </head>
     <body>
     	<?php
-			$hiddenNumber = $_SESSION['hiddenNumber']; //the "hidden number" is randomly
+        /* @var $hiddenNumber type */
+        $hiddenNumber = $_SESSION['hiddenNumber']; //the "hidden number" is randomly
 			$output = "";                              //set when someone guesses right
 
 			//Defining functions here
@@ -44,11 +45,10 @@
 			}
     	?>
     	<h1>A new side project</h1><br />
-    	
+
     	<a href="league.php">Some league thing</a><br />
-    	<a href="http://damp-cove.herokuapp.com" target="_blank">Some other thing that doesn't work</a><br />
-    	<a href="git://git@heroku.com:hidden-stream.git" target="_blank">Git</a>
-    
+    	<a href="http://damp-cove.herokuapp.com" target="_blank">Some other thing that doesn't work</a>
+
     	<p>
     		<?php
 				echo $output;
@@ -56,11 +56,11 @@
 				echo $hiddenNumber;
     		?>
     	</p>
-    	
+
     	<form id="myForm" action="index.php" method="POST">
     		<input type="text" name="number" />
 			<input type="submit" />
     	</form>
-    	
+
     </body>
 </html>

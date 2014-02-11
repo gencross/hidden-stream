@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="all">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>hidden-stream</title>
+	<link rel="stylesheet" type="text/css" href="all.css" />
+	<script>
+            var hiddenNumber = Math.floor((Math.random() * 100));
+
+            function highOrLow(guess) {
+                if (guess < hiddenNumber) {
+                    document.getElementById("par").innerHTML = "Too low!";
+                    }
+                else if (guess > hiddenNumber) {
+                    document.getElementById("par").innerHTML = "Too high!";
+                    }
+                else {
+                    temp = "You guesses it! The number was " + hiddenNumber + ". The number has been reset, so you can guess again!";
+                    hiddenNumber = Math.floor(Math.random() * 100);
+                    document.getElementById("par").innerHTML = temp;
+                    }
+                }
+        </script>
+    </head>
+    <body>
+    	<h1>A new side project</h1><br />
+    	
+    	<a href="league.php">Some league thing</a><br />
+    	<a href="http://damp-cove.herokuapp.com" target="_blank">Some other thing that doesn't work</a>
+    
+    	<p id="par">:0</p>
+
+        <input type="text" id="number" />
+	<button type="button" onclick="highOrLow(document.getElementById('number').value);">Send</button>
+    </body>
+</html>
